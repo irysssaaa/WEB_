@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Store</title>
+
+  <!-- Шрифт -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Іконки -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Стилі -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="logo">cyber</div>
+
+    <nav class="nav" id="nav">
+      <a href="#" class="active">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">Blog</a>
+    </nav>
+
+    <div class="icons">
+      <a href="#"><i class="fas fa-heart"></i></a>
+      <a href="#"><i class="fas fa-shopping-cart"></i></a>
+      <a href="#"><i class="fas fa-user"></i></a>
+    </div>
+
+    <div class="burger" id="burger">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="banner">
+    <div class="banner-content">
+      <p class="subtitle">Pro. Beyond.</p>
+      <h1 class="main-title">iPhone 14 Pro</h1>
+      <p class="description">Created to change everything for the better. For everyone.</p>
+      <button class="btn">Shop Now</button>
+    </div>
+
+    <div class="banner-image">
+      <img id="main-img" src="images/iphone1.png" alt="iPhone">
+      <div class="thumbs">
+        <img src="images/iphone1.png" alt="thumb1" class="active" onclick="changeImage(this)">
+        <img src="images/iphone2.jpg" alt="thumb2" onclick="changeImage(this)">
+        <img src="images/iphone3.jpg" alt="thumb3" onclick="changeImage(this)">
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
