@@ -1,104 +1,360 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Inter', sans-serif; background: #111; color: #fff; }
-
-/* HEADER */
-header {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 80px;
-  background: #fff;
-  border-bottom: 1px solid #ccc;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0 60px;
-  transition: background 0.3s, color 0.3s;
-  z-index: 1000;
+/* ========== RESET / VARS ========== */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --container:1120px;
+  --gap:16px;
+  --black:#000;
+  --white:#fff;
+  --muted:#909090;
+  --card:#F6F6F6;
 }
-header .logo { font-weight: 700; font-size: 22px; color: #000; }
-.nav { display: flex; gap: 20px; }
-.nav a { text-decoration: none; color: #000; font-size: 16px; transition: .2s; }
-.nav a:hover { color: orange; }
-.icons { display:flex; gap: 15px; }
-.icons a { color: #000; font-size: 18px; transition: .2s; text-decoration: none; }
-.icons a:hover { color: orange; }
-.burger { display:none; color:#000; font-size:20px; cursor:pointer; }
+body{font-family:'Inter',sans-serif;background:#111;color:#fff}
 
-/* коли скрол */
-header.scrolled { background: #3c0069 !important; }
-header.scrolled .logo,
-header.scrolled .nav a,
-header.scrolled .icons a,
-header.scrolled .burger { color: #fff !important; }
-
+/* ========== HEADER ========== */
+header{
+  position:fixed;top:0;left:0;width:100%;height:80px;background:#fff;
+  display:flex;align-items:center;justify-content:space-between;padding:0 40px;
+  z-index:1000;transition:.3s
+}
+header .logo{font-weight:700;font-size:22px;color:#000}
+.nav{display:flex;gap:20px;align-items:center}
+.nav a{text-decoration:none;color:#000;font-size:16px}
+.nav a:hover{color:orange}
+.icons{display:flex;gap:15px}
+.icons a{color:#000;font-size:18px}
+.icons a:hover{color:orange}
+.burger{display:none;cursor:pointer}
+.search{display:flex;align-items:center;gap:6px}
+.search input{padding:6px 10px;border:1px solid #ccc;outline:none}
+.search button{background:orange;border:none;color:#fff;padding:6px 10px;cursor:pointer}
+.desktop-search{display:flex}
+.mobile-search{display:none}
+header.scrolled{background:#3c0069!important}
+header.scrolled .logo,header.scrolled .nav a,header.scrolled .icons a{color:#fff!important}
+header.scrolled .search input{border-color:#fff}
+header.scrolled .search button{background:#fff;color:#3c0069}
 @media(max-width:768px){
-  .nav{display:none; flex-direction:column; position:absolute; top:80px; left:0; right:0; background:#fff; padding:20px;}
-  .nav.active{display:flex;}
-  .burger{display:block;}
-  header.scrolled .nav { background: #3c0069; }
+  .nav{display:none;flex-direction:column;position:absolute;top:80px;left:0;right:0;background:#fff;padding:20px;gap:15px}
+  .nav.active{display:flex}
+  .burger{display:block}
+  .desktop-search{display:none}
+  .mobile-search{display:flex}
+  header.scrolled .nav{background:#3c0069}
+  header.scrolled .mobile-search input{border-color:#fff}
+  header.scrolled .mobile-search button{background:#fff;color:#3c0069}
 }
 
-/* BANNER */
-.banner {
-  margin-top: 80px;
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 40px 160px;
-  background: linear-gradient(90deg, #211C24, #211C24);
+/* ========== BLOCK 1: HERO ========== */
+.banner{
+  margin-top:80px;display:flex;justify-content:space-between;align-items:center;
+  padding:40px 160px;background:#211C24
 }
-.banner-content {
-  max-width: 600px; display:flex; flex-direction:column; gap:24px;
-}
-.main-title {
-  font-size: 96px;
-  font-weight: 600;
-  line-height: 1;
-  white-space: nowrap; /* однорядковий на десктопі */
-}
-.subtitle { font-size: 25px; font-weight: 600; opacity: 0.4; }
-.description { font-size: 18px; font-weight: 500; opacity: 0.8; }
-.btn {
-  width: 191px; height: 56px;
-  border: 1px solid #fff; border-radius: 6px;
-  background: transparent; color: #fff;
-  cursor: pointer; font-size: 16px; font-weight: 500;
-  transition: .2s;
-}
-.btn:hover { background: #fff; color:#000; }
-
-/* IMAGE + GALLERY */
-.banner-image {
-  width: 406px; 
-  display:flex; flex-direction:column; align-items:center;
-}
-.banner-image img#main-img {
-  width: 100%;
-  height: auto;           /* повна картинка, не обрізана */
-  max-height: 632px;      /* обмеження висоти */
-  object-fit: contain;     /* не обрізати */
-  border-radius: 12px;
-}
-.thumbs { display:flex; gap:10px; margin-top:15px; }
-.thumbs img {
-  width:60px; height:90px;
-  object-fit: cover; border-radius:6px;
-  border:2px solid transparent; cursor:pointer;
-  transition:.2s;
-}
-.thumbs img:hover { transform:scale(1.05); }
-.thumbs img.active { border-color: orange; }
-
-/* Мобільна версія */
+.banner-content{max-width:600px;display:flex;flex-direction:column;gap:24px}
+.main-title{font-size:96px;font-weight:600;line-height:1;white-space:nowrap}
+.subtitle{font-size:25px;font-weight:600;opacity:.4}
+.description{font-size:18px;font-weight:500;opacity:.8}
+.btn{width:191px;height:56px;border:1px solid #fff;background:transparent;color:#fff;cursor:pointer}
+.btn:hover{background:#fff;color:#000}
+.banner-image{width:406px;display:flex;flex-direction:column;align-items:center}
+.banner-image img#main-img{width:100%;height:auto;max-height:632px;object-fit:contain}
+.thumbs{display:flex;gap:10px;margin-top:15px}
+.thumbs img{width:60px;height:90px;object-fit:cover;border:2px solid transparent;cursor:pointer}
+.thumbs img.active{border-color:orange}
 @media(max-width:768px){
-  .banner { flex-direction: column; text-align: center; padding: 40px 20px; }
-  .banner-content { align-items: center; }
-  .main-title {
-      font-size: 48px;      /* менший шрифт */
-      white-space: normal;  /* дозволяємо перенос */
-      word-break: break-word;
-  }
-  .banner-image { 
-      width: 100%; 
-      max-width: 350px; 
-      margin-top: 20px;   /* фото під заголовком */
-      height:auto;
-  }
-  .banner-image img#main-img { height:auto; }
+  .banner{flex-direction:column;text-align:center;padding:40px 20px}
+  .banner-content{align-items:center}
+  .main-title{font-size:48px;white-space:normal;word-break:break-word}
+  .banner-image{width:100%;max-width:350px;margin-top:20px;height:auto}
+  .banner-image img#main-img{height:auto}
+}
+
+/* ========== BLOCK 2: SMALL BANNERS ========== */
+.product-grid{display:flex;width:100%;gap:0;background:#fff;align-items:stretch;overflow:hidden}
+.left-side,.right-side{flex:1;display:flex;flex-direction:column;gap:0}
+.left-side .product-banner.white{flex:2;min-height:360px}
+.left-side .row{display:flex;gap:0;flex:1}
+.left-side .row .product-banner{flex:1;min-height:180px}
+.right-side .big{display:flex;flex-direction:row;align-items:center;justify-content:space-between;flex:1;min-height:540px}
+.product-banner{display:flex;align-items:center;margin:0;background:#333;color:#fff}
+.product-banner img{width:50%;max-height:100%;object-fit:contain;display:block}
+.product-banner .text{padding:20px;flex:1}
+.product-banner h2{font-size:30px;margin-bottom:8px}
+.product-banner p{font-size:14px;color:#ccc;margin:0}
+.white{background:#fff;color:#000}
+.light{background:#EDEDED;color:#000}
+.dark{background:#353535;color:#fff}
+.gray.big{flex-direction:row}
+@media(max-width:980px){
+  .product-grid{flex-direction:column}
+  .left-side .product-banner.white,.right-side .big{min-height:320px}
+  .left-side .row .product-banner{min-height:180px}
+}
+/* custom title lines */
+.product-banner.light h2,.product-banner.dark h2{font-size:28px;line-height:1.2;font-weight:400}
+.product-banner.light h2 .brand,.product-banner.dark h2 .brand{font-weight:500}
+.product-banner.light h2 .line,.product-banner.dark h2 .line{display:block}
+.product-banner.light h2 .bold,.product-banner.dark h2 .bold{font-weight:700}
+/* MacBook tile */
+.right-side .big{background:#EDEDED;color:#000;padding:40px}
+.right-side .big h2{font-size:64px;line-height:1;margin-bottom:20px}
+.right-side .big h2 .macbook{font-weight:700;display:block}
+.right-side .big h2 .air{font-weight:400;display:block;margin-top:10px}
+.right-side .big p{font-size:16px;color:#444;line-height:1.6;max-width:300px}
+.right-side .big .btn.black{border:1px solid #000;background:transparent;color:#000;margin-top:20px}
+.right-side .big .img-wrapper{display:flex;flex-direction:column;align-items:center}
+.macbook-img{width:100%;max-width:500px;height:auto;margin-bottom:10px}
+.body{width:80%;max-width:350px;margin:0 auto}
+
+/* ========== BLOCK 3: CATEGORY ========== */
+.category{background:#FAFAFA;padding:80px 160px;width:100%;box-sizing:border-box;margin:0}
+.category-inner{width:var(--container);max-width:100%;margin:0 auto;display:flex;flex-direction:column;gap:32px}
+.category-top{width:var(--container);height:32px;display:flex;justify-content:space-between;align-items:center}
+.category-title{font-weight:500;font-size:24px;line-height:32px;color:#000;margin:0}
+.category-arrows{display:flex;gap:16px;align-items:center;justify-content:flex-end}
+.btn-arrow{width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;background:transparent;border:0;cursor:pointer;color:#000;font-size:14px;padding:0}
+.category-cards{display:flex;gap:32px;flex-wrap:wrap;justify-content:flex-start;align-items:center}
+.card{width:160px;height:128px;padding:24px 32px;border-radius:15px;background:#EDEDED;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:8px;cursor:pointer;transition:transform .12s ease,box-shadow .12s ease}
+.card-icon img{width:48px;height:48px;object-fit:contain}
+.card-label{font-weight:500;font-size:16px;text-align:center;color:#000}
+.card:hover{transform:translateY(-4px);box-shadow:0 6px 18px rgba(0,0,0,.08)}
+
+/* ========== BLOCK 4: PRODUCTS ========== */
+.products{background:#fff;padding:56px 0}
+.products .product-tags,
+.products .products-grid{width:var(--container);max-width:calc(100% - 32px);margin:0 auto}
+.product-tags{display:flex;justify-content:flex-start;gap:32px;margin-bottom:24px}
+.product-tags .tag{font-weight:500;font-size:18px;line-height:32px;text-align:center;padding-bottom:4px;cursor:pointer;color:#000}
+.product-tags .selected{border-bottom:2px solid #000}
+.product-tags .normal{color:#8B8B8B}
+
+.products-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:24px;
+  align-items:stretch;                 /* однакова висота по рядку */
+}
+
+.product-card{
+  background:var(--card);
+  border-radius:12px;
+  padding:24px 16px;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  height:100%;                         /* тягнемося на повну висоту комірки */
+  box-shadow:0 1px 0 #E9E9E9;
+  transition:transform .12s ease,box-shadow .12s ease;
+}
+.product-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+
+.product-card .like-icon{position:absolute;top:12px;right:12px;width:24px;height:24px;cursor:pointer}
+
+.product-card .product-img{
+  width:160px;height:160px;object-fit:contain;margin-bottom:16px;
+}
+
+.product-card .product-info{
+  width:100%;text-align:center;
+  display:flex;flex-direction:column;gap:8px;
+  margin-top:auto;                     /* ПРИТИСНУТИ ЦІНУ+КНОПКУ ДО НИЗУ */
+}
+
+.product-card .product-desc{
+  font-weight:500;font-size:16px;line-height:24px;color:#000;
+  /* уніфікуємо висоту опису — до 3 рядків */
+  min-height:72px;
+  display:-webkit-box;
+  -webkit-line-clamp:3;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+
+.product-card .product-price{
+  font-weight:600;font-size:24px;color:#000;
+}
+
+.product-card .btn-buy{
+  width:100%;padding:12px 0;border-radius:8px;
+  background:#000;color:#fff;border:none;cursor:pointer;
+  margin-top:4px;                      /* невеликий відступ від ціни */
+}
+
+
+/* ========== BLOCK 5: BIG BANNERS (FULL-BLEED) ========== */
+.big-banners{
+  width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);
+  display:grid;grid-template-columns:repeat(4,1fr);gap:0;height:640px;background:none
+}
+.big-banners .banner-item{
+  position:relative;height:100%;padding:376px 32px 56px 32px;border-radius:0;overflow:hidden
+}
+/* скасувати глобальне max-width */
+.big-banners img{max-width:none}
+/* одиночні фото (тайли 2–4) — 360×366 по центру зверху */
+.big-banners .banner-img{
+  position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:360px;height:366px;object-fit:contain;z-index:0;pointer-events:none
+}
+/* тексти + кнопка */
+.big-banners .banner-text{position:relative;z-index:1;display:flex;flex-direction:column;gap:16px;max-width:296px}
+.big-banners .banner-title{font-weight:300;font-size:33px;line-height:48px;color:#000}
+.big-banners .banner-desc{font-weight:500;font-size:14px;line-height:24px;color:#909090}
+.big-banners .btn-shop{width:191px;height:56px;padding:16px 56px;border-radius:6px;border:1px solid #000;background:#000;color:#fff;cursor:pointer}
+/* темний четвертий — світлі тексти/кнопка */
+.banner-4 .banner-title,.banner-4 .banner-desc{color:#fff}
+.btn-shop.btn-shop--white{background:transparent;border-color:#fff;color:#fff}
+/* перший банер: дві окремі фотки під кутами */
+.banner-1 .banner-photo{position:absolute;object-fit:contain;z-index:0;pointer-events:none}
+/* фото 1 (нижнє) */
+.banner-1 .photo-1{width:213.477px;height:201.812px;top:22px;left:0;transform:rotate(-30.21deg);filter:drop-shadow(30px 53px 82px rgba(159,159,159,.15))}
+/* фото 2 (верхнє) */
+.banner-1 .photo-2{width:164.131px;height:186.309px;top:112.83px;left:117.49px;transform:rotate(119.79deg);filter:drop-shadow(30px 53px 82px rgba(159,159,159,.15))}
+/* адаптив */
+@media(max-width:1200px){
+  .big-banners{grid-template-columns:repeat(2,1fr);height:auto}
+  .big-banners .banner-item{min-height:640px}
+}
+@media(max-width:768px){
+  .big-banners{grid-template-columns:1fr}
+}
+
+/* ========== BLOCK 6: DISCOUNT PRODUCTS ========== */
+.discount-products{width:100%;padding:80px 0;background:#fff}
+.discount-products .discount-title{width:var(--container);max-width:calc(100% - 32px);margin:0 auto 24px;font-weight:500;font-size:24px;line-height:32px;color:#000;text-align:left}
+.discount-row{width:var(--container);max-width:calc(100% - 32px);margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.discount-card{background:var(--card);border-radius:9px;padding:24px 16px;position:relative;display:flex;flex-direction:column;align-items:center}
+.discount-card .like-icon{position:absolute;top:16px;right:16px;width:32px;height:32px;cursor:pointer}
+.discount-card .product-img{width:160px;height:160px;object-fit:contain;margin-bottom:24px}
+.discount-card .product-desc{font-weight:500;font-size:16px;line-height:24px;color:#000;text-align:center;margin-bottom:8px}
+.discount-card .product-price{font-weight:600;font-size:24px;color:#000;text-align:center;margin-bottom:16px}
+.discount-card .btn-buy{width:100%;padding:12px 0;border-radius:8px;background:#000;color:#fff;border:none;cursor:pointer}
+
+/* ========== RESPONSIVE (Blocks 4–6) ========== */
+@media(max-width:1200px){
+  .products-grid,.discount-row{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  .products-grid,.discount-row{grid-template-columns:1fr;gap:24px}
+  .product-tags{justify-content:flex-start;overflow-x:auto}
+}
+/* ===== BLOCK 7: SUMMER SALE (1440x448, фон як <img>) ===== */
+.sale{
+  position:relative;
+  width:100vw; height:448px;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
+  overflow:hidden;
+}
+.sale-bg{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  object-fit:cover;
+  filter:brightness(1.15) contrast(1.02); /* роблю фон трохи світлішим */
+}
+
+/* центрований контент 553×200, gap:40 */
+.sale-content{
+  position:absolute; top:50%; left:50%;
+  transform:translate(-50%,-50%);
+  width:553px; max-width:calc(100% - 32px);
+  display:flex; flex-direction:column; gap:40px;
+  align-items:center; text-align:center;
+  color:#fff;
+}
+
+/* заголовок: 72/72, -1% letter-spacing; Big Summer тонкий, Sale жирніший */
+.sale-title{
+  font-size:72px; line-height:72px;
+  letter-spacing:-0.01em;
+  font-weight:300; color:#fff;
+}
+.sale-title span{ font-weight:100; }   /* Big Summer */
+.sale-title strong{ font-weight:600; } /* Sale */
+
+/* підзаголовок */
+.sale-desc{
+  font-size:16px; line-height:32px; color:#787878;
+}
+
+/* кнопка — White Stroke */
+.sale-btn{
+  width:191px; height:56px; padding:16px 56px;
+  border-radius:6px; border:1px solid #fff;
+  background:transparent; color:#fff;
+  font-weight:500; font-size:16px; line-height:24px;
+  cursor:pointer;
+}
+.sale-btn:hover{ background:#fff; color:#000; }
+/* ======================= BLOCK 8: FOOTER ======================= */
+/* ======================= BLOCK 8: FOOTER ======================= */
+/* 1440×504, padding: 104/160, фон чорний */
+.footer8{
+  width:100vw;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
+  background:#000;
+  color:#fff;
+  padding:104px 160px;
+}
+
+/* внутрішня сітка 1120px: 384 | 295.5 | 295.5, gap 24 */
+.footer8__inner{
+  width:1120px;
+  max-width:100%;
+  margin:0 auto;
+
+  display:grid;
+  grid-template-columns:384px 295.5px 295.5px;
+  column-gap:24px;
+  align-items:start;
+  min-height:256px;
+}
+
+/* ЛІВА КОЛОНКА */
+.footer8__info{
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+  min-height:256px; /* щоб соц-іконки могли притиснутись до низу */
+}
+.footer8__logo{
+  width:65.4px; height:auto; display:block; object-fit:contain; /* 65.3996 × 22.872 */
+}
+.footer8__text{
+  max-width:384px; color:#CFCFCF;
+  font-weight:500; font-size:14px; line-height:1.71; /* 171% */
+}
+/* соцмережі в самому низу */
+.footer8__social{
+  margin-top:auto;
+  width:173px; height:16px;
+  display:flex; justify-content:space-between; align-items:center;
+}
+.footer8__s{ display:inline-block; line-height:0; }
+.footer8__s img{ width:16px; height:16px; display:block; object-fit:contain; }
+
+/* СЕРЕДНЯ/ПРАВА КОЛОНКИ */
+.footer8__sec{ width:295.5px; }
+.footer8__title{
+  margin:0 0 8px 0;
+  font-weight:600; font-size:16px; line-height:16px; color:#fff;
+}
+.footer8__list{ list-style:none; padding:0; margin:0; }
+.footer8__list li a{
+  display:block; text-decoration:none;
+  color:#CFCFCF;
+  font-weight:400; font-size:14px; line-height:32px; /* пункт = 32px */
+}
+.footer8__list li a:hover{ color:#fff; }
+
+/* Адаптив (за бажанням) */
+@media (max-width:1180px){
+  .footer8{ padding:80px 24px; }
+  .footer8__inner{ grid-template-columns:1fr 1fr; row-gap:32px; }
+  .footer8__sec{ width:auto; }
+}
+@media (max-width:700px){
+  .footer8__inner{ grid-template-columns:1fr; }
+  .footer8__social{ width:160px; }
 }

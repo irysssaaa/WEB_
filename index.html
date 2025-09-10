@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cyber Store</title>
-
-  <!-- Шрифт -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <!-- Іконки -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Стилі -->
+  <!-- твій фінальний style.css -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
+
+  <!-- ===== HEADER ===== -->
   <header id="header">
     <div class="logo">cyber</div>
-
     <nav class="nav" id="nav">
       <a href="#" class="active">Home</a>
       <a href="#">About</a>
       <a href="#">Contact</a>
       <a href="#">Blog</a>
+      <div class="search mobile-search">
+        <input type="text" placeholder="Search...">
+        <button><i class="fas fa-search"></i></button>
+      </div>
     </nav>
-
+    <div class="search desktop-search">
+      <input type="text" placeholder="Search...">
+      <button><i class="fas fa-search"></i></button>
+    </div>
     <div class="icons">
       <a href="#"><i class="fas fa-heart"></i></a>
       <a href="#"><i class="fas fa-shopping-cart"></i></a>
       <a href="#"><i class="fas fa-user"></i></a>
     </div>
-
-    <div class="burger" id="burger">
-      <i class="fas fa-bars"></i>
-    </div>
+    <div class="burger" id="burger"><i class="fas fa-bars"></i></div>
   </header>
 
-  <!-- Banner -->
+  <!-- ===== BLOCK 1: HERO ===== -->
   <section class="banner">
     <div class="banner-content">
       <p class="subtitle">Pro. Beyond.</p>
@@ -43,7 +44,6 @@
       <p class="description">Created to change everything for the better. For everyone.</p>
       <button class="btn">Shop Now</button>
     </div>
-
     <div class="banner-image">
       <img id="main-img" src="images/iphone1.png" alt="iPhone">
       <div class="thumbs">
@@ -54,6 +54,302 @@
     </div>
   </section>
 
+  <!-- ===== BLOCK 2: SMALL BANNERS ===== -->
+  <section class="product-grid">
+    <div class="left-side">
+      <div class="product-banner white">
+        <img src="images/playstation.png" alt="PlayStation">
+        <div class="text">
+          <h2>PlayStation 5</h2>
+          <p>Incredibly powerful CPUs, GPUs, and an SSD with integrated I/O will redefine your PlayStation experience.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="product-banner light">
+          <img src="images/headphone.png" alt="AirPods Max">
+          <div class="text">
+            <h2><span class="brand">Apple</span><br><span class="line">AirPods</span><br><span class="line bold">Max</span></h2>
+            <p>Computational audio. Listen, it's powerful</p>
+          </div>
+        </div>
+        <div class="product-banner dark">
+          <img src="images/vision.png" alt="Apple Vision Pro">
+          <div class="text">
+            <h2><span class="brand">Apple</span><br><span class="line bold">Vision Pro</span></h2>
+            <p>An immersive way to experience entertainment</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right-side">
+      <div class="product-banner gray big">
+        <div class="text">
+          <h2><span class="macbook">MacBook</span><br><span class="air">Air</span></h2>
+          <p>The new 15-inch MacBook Air makes room for more of what you love with a spacious Liquid Retina display.</p>
+          <button class="btn black">Shop Now</button>
+        </div>
+        <div class="img-wrapper">
+          <img src="images/fon.png" alt="MacBook" class="macbook-img">
+          <img src="images/body.png" alt="Body" class="body">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BLOCK 3: CATEGORY ===== -->
+  <section class="category">
+    <div class="category-inner">
+      <div class="category-top">
+        <h3 class="category-title">Browse By Category</h3>
+        <div class="category-arrows" aria-hidden="true">
+          <button class="arrow btn-arrow" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+          <button class="arrow btn-arrow" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+      <div class="category-cards">
+        <div class="card"><div class="card-icon"><img src="images/phones.png" alt="Phones"></div><div class="card-label">Phones</div></div>
+        <div class="card"><div class="card-icon"><img src="images/Smart Watches.png" alt="Smart Watches"></div><div class="card-label">Smart Watches</div></div>
+        <div class="card"><div class="card-icon"><img src="images/Cameras.png" alt="Cameras"></div><div class="card-label">Cameras</div></div>
+        <div class="card"><div class="card-icon"><img src="images/Headphones.png" alt="Headphones"></div><div class="card-label">Headphones</div></div>
+        <div class="card"><div class="card-icon"><img src="images/Computers.png" alt="Computers"></div><div class="card-label">Computers</div></div>
+        <div class="card"><div class="card-icon"><img src="images/Gaming.png" alt="Gaming"></div><div class="card-label">Gaming</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BLOCK 4: PRODUCTS ===== -->
+  <section class="products">
+    <div class="product-tags">
+      <div class="tag selected">New Arrival</div>
+      <div class="tag normal">Bestseller</div>
+      <div class="tag normal">Featured Products</div>
+    </div>
+    <div class="products-grid">
+      <!-- ряд 1 -->
+      <div class="product-card">
+        <img src="images/like.png" class="like-icon" alt="">
+        <img src="images/iphone14.png" class="product-img" alt="">
+        <div class="product-info">
+          <div class="product-desc">Apple iPhone 14 Pro Max 128GB Deep Purple</div>
+          <div class="product-price">$900</div>
+          <button class="btn-buy">Buy Now</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="images/like.png" class="like-icon" alt="">
+        <img src="images/camera6k.png" class="product-img" alt="">
+        <div class="product-info">
+          <div class="product-desc">Blackmagic Pocket Cinema Camera 6k</div>
+          <div class="product-price">$2535</div>
+          <button class="btn-buy">Buy Now</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="images/like.png" class="like-icon" alt="">
+        <img src="images/applewatch.png" class="product-img" alt="">
+        <div class="product-info">
+          <div class="product-desc">Apple Watch Series 9 GPS 41mm Starlight Aluminium</div>
+          <div class="product-price">$399</div>
+          <button class="btn-buy">Buy Now</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="images/like.png" class="like-icon" alt="">
+        <img src="images/airpods.png" class="product-img" alt="">
+        <div class="product-info">
+          <div class="product-desc">AirPods Max Silver Starlight Aluminium</div>
+          <div class="product-price">$549</div>
+          <button class="btn-buy">Buy Now</button>
+        </div>
+      </div>
+      <!-- ряд 2 -->
+      <div class="product-card">
+        <img src="images/like.png" class="like-icon" alt="">
+        <img src="images/qwatch.png" class="product-img" alt="">
+        <div class="product-info">
+          <div class="product-desc">Samsung Galaxy Watch6 Classic 47mm Black</div>
+          <div class="product-price">$369</div>
+          <button class="btn-buy">Buy Now</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="images/like2.png" class="like-icon" alt="">
+        <img src="images/zfold.png" class="product-img" alt="">
+        <div class="product-info">
+          <div class="product-desc">Galaxy Z Fold5 Unlocked | 256GB | Phantom Black</div>
+          <div class="product-price">$1799</div>
+          <button class="btn-buy">Buy Now</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="images/like.png" class="like-icon" alt="">
+        <img src="images/buds.png" class="product-img" alt="">
+        <div class="product-info">
+          <div class="product-desc">Galaxy Buds FE Graphite</div>
+          <div class="product-price">$99.99</div>
+          <button class="btn-buy">Buy Now</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="images/like.png" class="like-icon" alt="">
+        <img src="images/ipad.png" class="product-img" alt="">
+        <div class="product-info">
+          <div class="product-desc">Apple iPad 9 10.2&quot; 64GB Wi-Fi Silver (MK2L3) 2021</div>
+          <div class="product-price">$398</div>
+          <button class="btn-buy">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BLOCK 5: BIG BANNERS (full-bleed) ===== -->
+  <section class="big-banners">
+    <!-- 1 — ДВІ ФОТО -->
+    <div class="banner-item banner-1" style="background:#fff;">
+      <!-- нижнє фото -->
+      <img src="images/1.png" alt="" class="banner-photo photo-1">
+      <!-- верхнє фото -->
+      <img src="images/2.png" alt="" class="banner-photo photo-2">
+      <div class="banner-text">
+        <div class="banner-title">Popular Products</div>
+        <div class="banner-desc">iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.</div>
+        <button class="btn-shop">Shop Now</button>
+      </div>
+    </div>
+    <!-- 2 -->
+    <div class="banner-item banner-2" style="background:#F9F9F9;">
+      <img src="images/3.png" class="banner-img" alt="">
+      <div class="banner-text">
+        <div class="banner-title">Ipad Pro</div>
+        <div class="banner-desc">iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.</div>
+        <button class="btn-shop">Shop Now</button>
+      </div>
+    </div>
+    <!-- 3 -->
+    <div class="banner-item banner-3" style="background:#EAEAEA;">
+      <img src="images/4.png" class="banner-img" alt="">
+      <div class="banner-text">
+        <div class="banner-title">Samsung Galaxy</div>
+        <div class="banner-desc">iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.</div>
+        <button class="btn-shop">Shop Now</button>
+      </div>
+    </div>
+    <!-- 4 -->
+    <div class="banner-item banner-4" style="background:#2C2C2C;">
+      <img src="images/5.png" class="banner-img" alt="">
+      <div class="banner-text">
+        <div class="banner-title">Macbook Pro</div>
+        <div class="banner-desc">iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.</div>
+        <button class="btn-shop btn-shop--white">Shop Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BLOCK 6: DISCOUNT PRODUCTS ===== -->
+  <section class="discount-products">
+    <div class="discount-title">Discounts up to -50%</div>
+    <div class="discount-row">
+      <div class="discount-card">
+        <img src="images/like.png" class="like-icon" alt="">
+        <img src="images/iphonn.png" class="product-img" alt="">
+        <div class="product-desc">Apple iPhone 14 Pro 512GB Gold (MQ233)</div>
+        <div class="product-price">$1437</div>
+        <button class="btn-buy">Buy Now</button>
+      </div>
+      <div class="discount-card">
+        <img src="images/like.png" class="like-icon" alt="">
+        <img src="images/airpods.png" class="product-img" alt="">
+        <div class="product-desc">AirPods Max Silver Starlight Aluminium</div>
+        <div class="product-price">$549</div>
+        <button class="btn-buy">Buy Now</button>
+      </div>
+      <div class="discount-card">
+        <img src="images/like.png" class="like-icon" alt="">
+        <img src="images/applewatch.png" class="product-img" alt="">
+        <div class="product-desc">Apple Watch Series 9 GPS 41mm Starlight Aluminium</div>
+        <div class="product-price">$399</div>
+        <button class="btn-buy">Buy Now</button>
+      </div>
+      <div class="discount-card">
+        <img src="images/like.png" class="like-icon" alt="">
+        <img src="images/iphone2_.png" class="product-img" alt="">
+        <div class="product-desc">Apple iPhone 14 Pro 1TB Gold (MQ2V3)</div>
+        <div class="product-price">$1499</div>
+        <button class="btn-buy">Buy Now</button>
+      </div>
+    </div>
+  </section>
+<!-- ===== BLOCK 7: SUMMER SALE ===== -->
+<section class="sale">
+  <!-- фон як фото -->
+  <img class="sale-bg" src="images/7.png" alt="Big Summer Sale">
+
+  <!-- контент зверху -->
+  <div class="sale-content">
+    <h2 class="sale-title"><span>Big Summer</span> <strong>Sale</strong></h2>
+    <p class="sale-desc">Commodo fames vitae vitae leo mauris in. Eu consequat.</p>
+    <button class="sale-btn">Shop Now</button>
+  </div>
+</section>
+<!-- ===== BLOCK 8: FOOTER ===== -->
+<!-- ===== BLOCK 8: FOOTER ===== -->
+<footer class="footer8">
+  <div class="footer8__inner">
+    <!-- ЛІВО: лого -> текст -> соцмережі внизу -->
+    <div class="footer8__info">
+      <img src="images/Logo Vector.png" alt="cyber" class="footer8__logo">
+
+      <p class="footer8__text">
+        We are a residential interior design firm located in Portland.
+        Our boutique-studio offers more than
+      </p>
+
+      <div class="footer8__social">
+        <a class="footer8__s" href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Twitter">
+          <img src="images/twitter.png" alt="">
+        </a>
+        <a class="footer8__s" href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+          <img src="images/facebook.png" alt="">
+        </a>
+        <a class="footer8__s" href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok">
+          <img src="images/tiktok.png" alt="">
+        </a>
+        <a class="footer8__s" href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+          <img src="images/instagram.png" alt="">
+        </a>
+      </div>
+    </div>
+
+    <!-- СЕРЕДИНА: Services -->
+    <nav class="footer8__sec">
+      <h4 class="footer8__title">Services</h4>
+      <ul class="footer8__list">
+        <li><a href="#">Bonus program</a></li>
+        <li><a href="#">Gift cards</a></li>
+        <li><a href="#">Credit and payment</a></li>
+        <li><a href="#">Service contracts</a></li>
+        <li><a href="#">Non-cash account</a></li>
+        <li><a href="#">Payment</a></li>
+      </ul>
+    </nav>
+
+    <!-- ПРАВО: Assistance to the buyer -->
+    <nav class="footer8__sec">
+      <h4 class="footer8__title">Assistance to the buyer</h4>
+      <ul class="footer8__list">
+        <li><a href="#">Find an order</a></li>
+        <li><a href="#">Terms of delivery</a></li>
+        <li><a href="#">Exchange and return of goods</a></li>
+        <li><a href="#">Guarantee</a></li>
+        <li><a href="#">Frequently asked questions</a></li>
+        <li><a href="#">Terms of use of the site</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  <!-- підключення окремого JS, як у тебе було -->
   <script src="script.js"></script>
 </body>
 </html>
