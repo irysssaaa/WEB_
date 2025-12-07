@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна 3 – Завдання 2 (Генератор паролів)</title>
+    <link rel="stylesheet" href="lab3_task2.css">
+</head>
+<body>
+    <div class="overlay"></div>
+
+    <div class="container">
+        <h1>Лабораторна робота 3</h1>
+        <h2>Завдання 2 – Генератор паролів</h2>
+
+        <p class="description">
+            Натисни кнопку, вводь символи один за одним у вікнах <code>prompt</code>.<br>
+            Коли закінчиш, введи <code>done</code>, і генератор збере пароль.
+        </p>
+
+        <button id="start">Почати введення пароля</button>
+
+        <div id="result-box">
+            <span>Згенерований пароль:</span>
+            <div id="password-output">—</div>
+        </div>
+
+        <button id="back" onclick="window.location.href='lr3.html'">Назад до ЛР 3</button>
+    </div>
+
+    <script src="lr3_task2.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at top, #ff7bff 0, #5e00a8 35%, #050013 100%);
+    color: #ffffff;
+}
+
+.container {
+    background: rgba(10, 0, 30, 0.9);
+    padding: 24px 24px 28px;
+    border-radius: 20px;
+    max-width: 420px;
+    width: 95%;
+    text-align: center;
+    box-shadow:
+        0 0 25px rgba(187, 134, 252, 0.7),
+        0 0 60px rgba(187, 134, 252, 0.4);
+    border: 1px solid rgba(187, 134, 252, 0.7);
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    opacity: 0.9;
+}
+
+.description {
+    font-size: 14px;
+    margin-bottom: 14px;
+    opacity: 0.9;
+}
+
+.info {
+    font-size: 13px;
+    margin-bottom: 14px;
+    opacity: 0.85;
+}
+
+#out {
+    margin: 16px auto;
+    padding: 16px;
+    min-height: 40px;
+    border-radius: 12px;
+    background: rgba(30, 0, 70, 0.95);
+    border: 1px solid rgba(255, 204, 255, 0.8);
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 0 16px rgba(255, 153, 255, 0.8);
+}
+
+button {
+    display: inline-block;
+    margin: 4px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 204, 255, 0.9);
+    background: radial-gradient(circle at 0 0, rgba(255, 255, 255, 0.14), transparent 55%);
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 0 12px rgba(255, 153, 255, 0.8);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+button:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow:
+        0 0 18px rgba(255, 153, 255, 1),
+        0 0 30px rgba(187, 134, 252, 0.9);
+    background: radial-gradient(circle at 100% 0, rgba(255, 255, 255, 0.18), transparent 55%);
+}
+
+button:active {
+    transform: translateY(0) scale(0.97);
+    box-shadow: 0 0 8px rgba(255, 153, 255, 0.7);
+}
+
+button.secondary {
+    border-color: rgba(179, 221, 255, 0.9);
+    box-shadow: 0 0 10px rgba(179, 221, 255, 0.8);
+    font-size: 13px;
+}

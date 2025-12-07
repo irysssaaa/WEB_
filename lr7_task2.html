@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>ЛР7 – Завдання 2: checkNumber з Promise</title>
+    <link rel="stylesheet" href="lr7_task2.css">
+    <script src="lr7_task2.js" defer></script>
+</head>
+<body>
+<div class="container">
+    <h1>Лабораторна робота 7</h1>
+    <h2>Завдання 2. Перевірка числа за допомогою Promise</h2>
+
+    <p class="description">
+        Функція <code>checkNumber(num)</code> повертає <code>Promise</code>.
+        Якщо <code>num &gt; 10</code> – Promise виконується з повідомленням
+        «Число більше 10», інакше відхиляється з повідомленням
+        «Число менше або дорівнює 10».
+    </p>
+
+    <div class="form-row">
+        <label for="numberInput">Введіть число:</label>
+        <input type="number" id="numberInput" placeholder="наприклад, 7 або 15">
+    </div>
+
+    <button id="checkBtn">Перевірити число</button>
+
+    <!-- Завдання 0: лоадер + блок результату -->
+    <div id="loader" class="loader" style="display: none;">Завантаження...</div>
+    <div id="result" class="result"></div>
+</div>
+</body>
+</html>

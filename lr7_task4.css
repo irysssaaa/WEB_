@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.form {
+    margin-bottom: 15px;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="number"] {
+    width: 150px;
+    padding: 4px;
+    margin-left: 5px;
+}
+
+button {
+    margin-top: 8px;
+    padding: 6px 14px;
+    cursor: pointer;
+}
+
+#loader {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#result {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#result.success {
+    color: green;
+}
+
+#result.error {
+    color: red;
+}

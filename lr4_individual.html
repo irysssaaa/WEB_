@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>ЛР4 – Індивідуальний проєкт: Колекція коміксів</title>
+    <link rel="stylesheet" href="lr4_individual.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Лабораторна робота 4</h1>
+        <h2>Індивідуальний проєкт: Колекція коміксів</h2>
+
+        <form id="addComicForm" class="comic-form">
+            <h3>Додати комікс</h3>
+
+            <label>
+                Назва:
+                <input type="text" id="title" required>
+            </label>
+
+            <label>
+                Автор:
+                <input type="text" id="author" required>
+            </label>
+
+            <label>
+                Видавництво:
+                <input type="text" id="publisher" required>
+            </label>
+
+            <label>
+                Рік випуску:
+                <input type="number" id="year" min="1900" max="2100" required>
+            </label>
+
+            <label class="checkbox">
+                <input type="checkbox" id="inCollection">
+                Є в колекції
+            </label>
+
+            <button type="submit">Додати в колекцію</button>
+        </form>
+
+        <section class="list-section">
+            <h3>Моя колекція коміксів</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Назва</th>
+                        <th>Автор</th>
+                        <th>Видавництво</th>
+                        <th>Рік</th>
+                        <th>Є в колекції</th>
+                    </tr>
+                </thead>
+                <tbody id="comicsList">
+                    <!-- Ряди додаються з JavaScript -->
+                </tbody>
+            </table>
+
+            <div class="average">
+                Середній рік випуску: 
+                <span id="avgYear">—</span>
+            </div>
+        </section>
+    </div>
+
+    <script src="lr4_individual.js"></script>
+</body>
+</html>

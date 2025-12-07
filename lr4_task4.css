@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: #f5f5ff;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 1px solid #4444aa;
+    background: #6666ff;
+    color: #fff;
+    font-weight: 600;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+#output {
+    background: #111;
+    color: #0f0;
+    padding: 12px;
+    margin-top: 15px;
+    min-height: 120px;
+    border-radius: 6px;
+}

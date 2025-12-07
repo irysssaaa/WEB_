@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+#captcha-box {
+    width: 120px;
+    height: 50px;
+    border: 1px solid #999;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+
+#captcha-display {
+    line-height: 1;
+}
+
+.captcha-pixel {
+    display: inline-block;
+    font-size: 32px;
+    font-weight: bold;
+    color: red;
+    padding: 0 2px;
+}
+
+#captcha-input {
+    width: 120px;
+    margin-bottom: 5px;
+}
+
+#check-btn,
+#refresh-btn {
+    margin-right: 5px;
+}
+
+#captcha-message {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+#captcha-message.error {
+    color: red;
+}
+
+#captcha-message.success {
+    color: green;
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Мови програмування для Web – Дидяк Іри</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Красивий шрифт -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            /* Неоновий фіолетовий фон */
+            background: radial-gradient(circle at top, #ff7bff 0, #5e00a8 35%, #050013 100%);
+        }
+
+        .overlay {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background:
+                radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.12) 0, transparent 35%),
+                radial-gradient(circle at 80% 80%, rgba(255, 0, 255, 0.2) 0, transparent 45%);
+            opacity: 0.7;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1000px;
+            width: 95%;
+            padding: 30px 24px 32px;
+            background: rgba(10, 0, 30, 0.85);
+            border-radius: 24px;
+            box-shadow:
+                0 0 25px rgba(187, 134, 252, 0.7),
+                0 0 80px rgba(187, 134, 252, 0.4);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(187, 134, 252, 0.6);
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 18px;
+        }
+
+        .title h1 {
+            font-size: clamp(26px, 4vw, 34px);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px #ff99ff, 0 0 20px #ff66ff;
+        }
+
+        .title h2 {
+            margin-top: 6px;
+            font-size: 18px;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        .divider {
+            width: 80px;
+            height: 2px;
+            margin: 18px auto 10px;
+            background: linear-gradient(90deg, transparent, #ffb3ff, transparent);
+        }
+
+        .columns {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+            margin-top: 10px;
+        }
+
+        .column {
+            background: rgba(30, 0, 70, 0.9);
+            border-radius: 18px;
+            padding: 16px 18px 18px;
+            border: 1px solid rgba(255, 179, 255, 0.6);
+            box-shadow: 0 0 18px rgba(187, 134, 252, 0.5);
+        }
+
+        .column h3 {
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+            padding: 10px 12px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 204, 255, 0.8);
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background: radial-gradient(circle at 0 0, rgba(255, 255, 255, 0.12), transparent 55%);
+            box-shadow: 0 0 12px rgba(255, 153, 255, 0.7);
+            transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow:
+                0 0 18px rgba(255, 153, 255, 1),
+                0 0 30px rgba(187, 134, 252, 0.8);
+            background: radial-gradient(circle at 100% 0, rgba(255, 255, 255, 0.18), transparent 55%);
+        }
+
+        .btn:active {
+            transform: translateY(0) scale(0.98);
+            box-shadow: 0 0 8px rgba(255, 153, 255, 0.7);
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 18px;
+            font-size: 12px;
+            opacity: 0.75;
+        }
+
+        @media (max-width: 700px) {
+            .columns {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+
+    <div class="container">
+        <div class="title">
+            <h1>Мови програмування для Web</h1>
+            <div class="divider"></div>
+            <h2>Дидяк Іри</h2>
+        </div>
+
+        <div class="columns">
+            <!-- Лабораторні -->
+            <div class="column">
+                <h3>Лабораторні</h3>
+                <div class="buttons">
+                    <!-- Тут ти потім просто змінюєш href на свій файл -->
+                    <a class="btn" href="lr1.html">ЛР 1</a>
+                    <a class="btn" href="lr2.html">ЛР 2</a>
+                    <a class="btn" href="lr3.html">ЛР 3</a>
+                    <a class="btn" href="lr4.html">ЛР 4</a>
+                    <a class="btn" href="lr5.html">ЛР 5</a>
+                    <a class="btn" href="lr6.html">ЛР 6</a>
+                    <a class="btn" href="lr7.html">ЛР 7</a>
+                </div>
+            </div>
+
+            <!-- Практичні -->
+            <div class="column">
+                <h3>Практичні</h3>
+                <div class="buttons">
+                    <a class="btn" href="pr1.html">ПР 1</a>
+                    <a class="btn" href="pr2.html">ПР 2</a>
+                    <a class="btn" href="pr3.html">ПР 3</a>
+                    <a class="btn" href="pr4.html">ПР 4</a>
+                    <a class="btn" href="pr5.html">ПР 5</a>
+                    <a class="btn" href="pr6.html">ПР 6</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

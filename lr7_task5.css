@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top, #ff7bff 0, #5e00a8 35%, #050013 100%);
+    color: #fff;
+}
+
+.container {
+    background: rgba(10, 0, 30, 0.9);
+    padding: 24px 28px;
+    border-radius: 18px;
+    max-width: 600px;
+    width: 95%;
+    box-shadow:
+        0 0 25px rgba(187, 134, 252, 0.7),
+        0 0 60px rgba(187, 134, 252, 0.4);
+    border: 1px solid rgba(187, 134, 252, 0.6);
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 4px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+#startBtn {
+    display: block;
+    margin: 12px auto 16px;
+    padding: 10px 20px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 204, 255, 0.8);
+    background: radial-gradient(circle at 0 0, rgba(255, 255, 255, 0.12), transparent 55%);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(255, 153, 255, 0.8);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#startBtn:hover {
+    transform: translateY(-1px) scale(1.02);
+    box-shadow:
+        0 0 18px rgba(255, 153, 255, 1),
+        0 0 30px rgba(187, 134, 252, 0.8);
+}
+
+#startBtn:disabled {
+    opacity: 0.6;
+    cursor: default;
+    box-shadow: none;
+}
+
+/* Лоадер */
+.loader {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #ffffff;
+    margin: 0 auto 12px;
+    animation: spin 0.8s linear infinite;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.result {
+    background: rgba(30, 0, 70, 0.85);
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-size: 14px;
+    line-height: 1.4;
+    border: 1px solid rgba(255, 204, 255, 0.7);
+    white-space: pre-line;
+}

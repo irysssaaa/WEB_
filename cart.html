@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Практична 6 – Корзина</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pr6_task1.css">
+</head>
+<body>
+<header class="header">
+    <h1>Корзина</h1>
+
+    <div class="cart-icon" id="cart-icon">
+        <span class="cart-icon__emoji">🛒</span>
+        <span class="cart-icon__count" id="cart-count">0</span>
+    </div>
+</header>
+
+<div class="cart-wrapper" id="cart-wrapper">
+    <h2 class="cart-title">Ви обрали:</h2>
+
+    <div id="cart-empty" class="cart-empty" style="display: none;">
+        Корзина пуста. <a href="pr6_task1.html">Повернутись до покупок</a>
+    </div>
+
+    <table class="cart-table" id="cart-table" style="display: none;">
+        <thead>
+        <tr>
+            <th>№</th>
+            <th>Назва товару</th>
+            <th>Ціна за од.</th>
+            <th>К-сть</th>
+            <th>Сума</th>
+            <th>Дії</th>
+        </tr>
+        </thead>
+        <tbody id="cart-body">
+        <!-- рядки додає JS -->
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="4" style="text-align:right;"><strong>Разом до оплати:</strong></td>
+            <td id="cart-total"><strong>0 грн</strong></td>
+            <td></td>
+        </tr>
+        </tfoot>
+    </table>
+
+    <div class="cart-actions" id="cart-actions" style="display: none;">
+        <button class="cart-btn cart-btn--pay" id="pay-btn">Оплатити</button>
+        <button class="cart-btn cart-btn--back" id="back-btn">Повернутись до покупок</button>
+    </div>
+</div>
+
+<script src="cart.js" defer></script>
+</body>
+</html>

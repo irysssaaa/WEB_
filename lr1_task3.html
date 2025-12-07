@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>3 — Показати блоки прізвища</title>
+  <style>
+    #letters { display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; }
+    #letters div { padding:8px 12px; border:1px solid #ccc; border-radius:6px; font:600 16px/1 sans-serif; }
+  </style>
+</head>
+<body>
+  <button id="btn">Показати блоки</button>
+  <div id="letters"></div>
+
+  <script type="module">
+    const lastName = "Дидяк"; 
+
+    const btn = document.getElementById('btn');
+    const box = document.getElementById('letters');
+
+    btn.addEventListener('click', () => {
+      if (box.children.length > 0) {
+        box.innerHTML = "";                 
+        btn.textContent = "Показати блоки";
+        return;
+      }
+      for (const ch of lastName) {        
+        const div = document.createElement('div');
+        div.textContent = ch;
+        div.addEventListener('mouseover', () => alert(`Це літера ${ch}`));
+        box.appendChild(div);
+      }
+      btn.textContent = "Очистити";
+    });
+  </script>
+</body>
+</html>

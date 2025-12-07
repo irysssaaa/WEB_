@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+}
+
+.container {
+    width: 400px;
+}
+
+#score {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#question {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+#answers label {
+    display: block;
+    margin: 4px 0;
+}
+
+#result {
+    margin-top: 10px;
+    font-weight: bold;
+}

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>1 — Літери імені Іра:</title>
+</head>
+<body>
+  <h1>ЛР1 — Літери імені</h1>
+  <div id="container"></div>
+
+  <script>
+    const myName = 'Іра';
+    const container = document.getElementById('container');
+    const ul = document.createElement('ul');
+
+    [...myName].forEach((letter) => {
+      const li = document.createElement('li');
+      li.textContent = letter;
+      li.addEventListener('mouseenter', () => {
+        alert(letter);
+      });
+      ul.appendChild(li);
+    });
+
+    container.appendChild(ul);
+  </script>
+</body>
+</html>

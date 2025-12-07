@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111827;
+    color: #f9fafb;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    background: #1f2937;
+    border-radius: 12px;
+    padding: 20px 24px 28px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 16px;
+    color: #a5b4fc;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+.comic-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px 20px;
+    margin-bottom: 20px;
+    padding: 12px;
+    background: #111827;
+    border-radius: 10px;
+}
+
+.comic-form label {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+.comic-form input[type="text"],
+.comic-form input[type="number"] {
+    margin-top: 4px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid #4b5563;
+    background: #0f172a;
+    color: #f9fafb;
+}
+
+.checkbox {
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    margin-top: 18px;
+}
+
+.comic-form button {
+    grid-column: 1 / -1;
+    padding: 8px 12px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    background: #4f46e5;
+    color: white;
+    font-weight: 600;
+    margin-top: 4px;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.comic-form button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0 10px rgba(129, 140, 248, 0.8);
+}
+
+.list-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.list-section th,
+.list-section td {
+    padding: 6px 8px;
+    border-bottom: 1px solid #374151;
+    text-align: left;
+}
+
+.list-section th {
+    background: #111827;
+}
+
+.average {
+    margin-top: 10px;
+    font-size: 14px;
+}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>2 - Ввід ПІБ до Cancel</title>
+</head>
+<body>
+  <h2>Введені прізвища та імена:</h2>
+  <ul id="people"></ul>
+
+ <script type="module">
+  const list = document.getElementById('people');
+
+  while (true) {
+    const last = prompt('Введіть прізвище (для завершення натисніть «Скасувати»):');
+    if (last === null) break;
+    const first = prompt('Введіть ім’я (для завершення натисніть «Скасувати»):');
+    if (first === null) break;
+
+    const l = last.trim();
+    const f = first.trim();
+    if (!l || !f) continue;
+
+    const li = document.createElement('li');
+    li.textContent = `${l} ${f}`;
+    list.appendChild(li);
+  }
+</script>
+</body>
+</html>

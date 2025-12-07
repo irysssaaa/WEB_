@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at top, #ff7bff 0, #5e00a8 35%, #050013 100%);
+    color: #ffffff;
+}
+
+.container {
+    background: rgba(10, 0, 30, 0.9);
+    padding: 24px 22px 26px;
+    border-radius: 18px;
+    width: 95%;
+    max-width: 600px;
+    border: 1px solid rgba(187, 134, 252, 0.7);
+    box-shadow:
+        0 0 25px rgba(187, 134, 252, 0.7),
+        0 0 60px rgba(187, 134, 252, 0.4);
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+
+.description {
+    font-size: 14px;
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+#startChat {
+    display: block;
+    margin: 0 auto 16px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 204, 255, 0.9);
+    background: rgba(90, 0, 160, 0.9);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(255, 153, 255, 0.8);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#startChat:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 0 18px rgba(255, 153, 255, 1),
+        0 0 30px rgba(187, 134, 252, 0.8);
+}
+
+.log {
+    background: rgba(25, 0, 60, 0.9);
+    border-radius: 12px;
+    padding: 10px 12px;
+    font-size: 13px;
+    max-height: 260px;
+    overflow-y: auto;
+    border: 1px solid rgba(187, 134, 252, 0.5);
+}
+
+.log-entry {
+    margin-bottom: 6px;
+}
+
+.log-entry span.label {
+    font-weight: bold;
+}
+
+.log-entry span.bot {
+    color: #ffd6ff;
+}
+
+.log-entry span.user {
+    color: #c2f3ff;
+}
