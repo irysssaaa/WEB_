@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Практична 3 – Завдання 3</title>
+    <link rel="stylesheet" href="pr3_task3.css">
+</head>
+<body>
+<div class="container">
+    <h1>Практична робота 3 – Завдання 3</h1>
+
+    <section class="block">
+        <h2>getLastDayOfMonth(year, month)</h2>
+        <p>Введи рік і місяць, щоб дізнатися останній день місяця.</p>
+
+        <label>
+            Рік:
+            <input type="number" id="year" placeholder="2024">
+        </label>
+
+        <label>
+            Місяць (0–11):
+            <input type="number" id="month" placeholder="1 (лютий = 1)">
+        </label>
+
+        <button id="btnLastDay">Обчислити останній день</button>
+
+        <div class="result" id="lastDayResult"></div>
+    </section>
+
+    <section class="block">
+        <h2>getSecondsToTomorrow()</h2>
+        <p>Натисни кнопку, щоб дізнатися, скільки секунд залишилось до завтра.</p>
+
+        <button id="btnSeconds">Скільки секунд до завтра?</button>
+
+        <div class="result" id="secondsResult"></div>
+    </section>
+</div>
+
+<script src="pr3_task3.js"></script>
+</body>
+</html>

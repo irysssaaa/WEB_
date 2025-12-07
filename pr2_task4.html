@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Практична 2 – Завдання 4</title>
+    <link rel="stylesheet" href="pr2_task4.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ставка та випадковий результат</h1>
+        <p class="description">
+            Введи суму ставки, а ми згенеруємо випадкове число від -5 до 5. <br>
+            Якщо число ≤ 0 — ти програєш ставку. Якщо число &gt; 0 — помножимо ставку на це число 💰
+        </p>
+
+        <div class="form-row">
+            <label for="betInput">Сума ставки (грн):</label>
+            <input type="number" id="betInput" min="1" placeholder="Введіть суму">
+        </div>
+
+        <button id="playBtn">Зробити ставку</button>
+
+        <div id="status"></div>
+        <div id="result"></div>
+    </div>
+
+    <script src="pr2_task4.js"></script>
+</body>
+</html>

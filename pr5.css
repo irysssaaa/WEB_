@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background: radial-gradient(circle at top, #f3c6ff 0, #7b2cff 40%, #19002e 100%);
+    padding-top: 40px;
+}
+
+.app {
+    width: 100%;
+    max-width: 500px;
+    background: rgba(25, 0, 60, 0.9);
+    border-radius: 20px;
+    padding: 20px 22px 24px;
+    color: #fff;
+    box-shadow:
+        0 0 25px rgba(199, 140, 255, 0.9),
+        0 0 60px rgba(122, 70, 255, 0.8);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 16px;
+    text-shadow: 0 0 10px #ffb3ff;
+}
+
+#new-task-input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 999px;
+    border: 1px solid #e3c2ff;
+    outline: none;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+#new-task-input:focus {
+    box-shadow: 0 0 10px rgba(255, 179, 255, 0.9);
+}
+
+.filters {
+    display: flex;
+    gap: 8px;
+    margin: 12px 0 10px;
+    justify-content: center;
+}
+
+.filter-btn {
+    border-radius: 999px;
+    border: 1px solid #d7b6ff;
+    padding: 5px 10px;
+    font-size: 12px;
+    background: rgba(120, 75, 255, 0.2);
+    color: #f5eaff;
+    cursor: pointer;
+}
+
+.filter-btn.active {
+    background: #f1d0ff;
+    color: #3b0f6d;
+    font-weight: bold;
+}
+
+#tasks-list {
+    list-style: none;
+    margin-top: 8px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 6px 8px;
+    background: rgba(65, 20, 130, 0.9);
+    border-radius: 10px;
+    margin-bottom: 6px;
+    border: 1px solid rgba(222, 188, 255, 0.8);
+}
+
+.task-checkbox {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.task-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.task-text {
+    font-size: 14px;
+}
+
+.task-date {
+    font-size: 11px;
+    opacity: 0.8;
+}
+
+.task-delete {
+    border: 1px solid #ff99c8;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffd4e8;
+    cursor: pointer;
+    margin-left: 8px;
+    font-size: 14px;
+}
+
+.task-delete:hover {
+    background: rgba(255, 60, 141, 0.7);
+}
+
+.task-done .task-text {
+    text-decoration: line-through;
+    color: #bbbbbb;
+}
+
+.task-done .task-date {
+    color: #aaaaaa;
+}
+
+.task-done .task-checkbox {
+    display: none;
+}
+
+/* режим редагування */
+.task-edit-input {
+    width: 100%;
+    padding: 4px 6px;
+    border-radius: 6px;
+    border: 1px solid #e3c2ff;
+    font-size: 14px;
+    outline: none;
+}

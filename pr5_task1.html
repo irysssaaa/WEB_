@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Практична 5 – ToDo List</title>
+    <link rel="stylesheet" href="pr5.css">
+</head>
+<body>
+<div class="app">
+    <h1>ToDo List</h1>
+
+    <input
+        id="new-task-input"
+        type="text"
+        placeholder="Додайте завдання і натисніть Enter"
+        autocomplete="off"
+    >
+
+    <div class="filters">
+        <button data-filter="all" class="filter-btn active">Усі</button>
+        <button data-filter="active" class="filter-btn">Невиконані</button>
+        <button data-filter="completed" class="filter-btn">Виконані</button>
+    </div>
+
+    <ul id="tasks-list"></ul>
+</div>
+
+<script src="pr5.js"></script>
+</body>
+</html>

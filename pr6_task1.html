@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Практична 6 – Каталог мобільних телефонів</title>
+    <link rel="stylesheet" href="pr6_task1.css">
+</head>
+<body>
+<header class="header">
+    <h1>Каталог мобільних телефонів</h1>
+
+    <div class="cart-icon" id="cart-icon">
+        <span class="cart-icon__emoji">🛒</span>
+        <span class="cart-icon__count" id="cart-count">0</span>
+    </div>
+</header>
+
+<h2>Обов'язково додайте свій телефон у кошик</h2>
+
+<div class="wrap">
+    <div class="swipe swipe_left">&lt;</div>
+    <div class="swipe swipe_right">&gt;</div>
+
+    <!-- Товар 1 -->
+    <div class="product_card">
+        <div class="sticker sticker_novetly">Новинка</div>
+        <div class="category">
+            <a class="link" href="https://rozetka.com.ua/ua/mobile-phones/c80003/" target="_blank">
+                Смартфони
+            </a>
+        </div>
+        <div class="image">
+            <a href="https://rozetka.com.ua/ua/apple-mynh3sx-a/p448428575/" target="_blank">
+                <img src="https://content2.rozetka.com.ua/goods/images/big/468886490.jpg"
+                     alt="Apple iPhone 16 Pro 256GB">
+            </a>
+        </div>
+        <div class="name_product">
+            <a class="link" href="https://rozetka.com.ua/ua/apple-mynh3sx-a/p448428575/" target="_blank">
+                Apple iPhone 16 Pro 256GB
+            </a>
+        </div>
+        <div class="price">
+            <span class="old_price">61 499 грн</span>
+            <span class="new_price">56 699 грн</span>
+        </div>
+        <a href="#" class="btn add-to-cart"
+           data-id="iphone16pro"
+           data-name="Apple iPhone 16 Pro 256GB"
+           data-price="56699">
+            У кошик
+        </a>
+    </div>
+
+    <!-- Товар 2 -->
+    <div class="product_card">
+        <div class="category">
+            <a class="link" href="https://rozetka.com.ua/ua/mobile-phones/c80003/producer=apple/" target="_blank">
+                Apple
+            </a>
+        </div>
+        <div class="image">
+            <a href="https://rozetka.com.ua/ua/apple-iphone-15-128gb-pink/p395460636/" target="_blank">
+                <img src="https://content1.rozetka.com.ua/goods/images/big/364623617.jpg"
+                     alt="Apple iPhone 15">
+            </a>
+        </div>
+        <div class="name_product">
+            <a class="link" href="https://rozetka.com.ua/ua/apple-iphone-15-128gb-pink/p395460636/" target="_blank">
+                Apple iPhone 15 128GB
+            </a>
+        </div>
+        <div class="price">
+            <span class="old_price">37 999 грн</span>
+            <span class="new_price">33 999 грн</span>
+        </div>
+        <a href="#" class="btn add-to-cart"
+           data-id="iphone15"
+           data-name="Apple iPhone 15 128GB"
+           data-price="33999">
+            У кошик
+        </a>
+    </div>
+
+    <!-- Товар 3 -->
+    <div class="product_card">
+        <div class="sticker sticker_top">АКЦІЯ</div>
+        <div class="category">
+            <a class="link" href="https://rozetka.com.ua/ua/samsung-sm-a566bzkceuc/p484698794/"
+               target="_blank">
+                Акційний товар
+            </a>
+        </div>
+        <div class="image">
+            <a href="https://rozetka.com.ua/ua/samsung-sm-a566bzkceuc/p484698794/" target="_blank">
+                <img src="https://content2.rozetka.com.ua/goods/images/big/523586733.jpg"
+                     alt="Samsung Galaxy A56">
+            </a>
+        </div>
+        <div class="name_product">
+            <a class="link" href="https://rozetka.com.ua/ua/samsung-sm-a566bzkceuc/p484698794/"
+               target="_blank">
+                Samsung Galaxy A56 5G 8/256GB
+            </a>
+        </div>
+        <div class="price">21 399 грн</div>
+        <a href="#" class="btn add-to-cart"
+           data-id="galaxya56"
+           data-name="Samsung Galaxy A56 5G 8/256GB"
+           data-price="21399">
+            У кошик
+        </a>
+    </div>
+
+    <!-- Товар 4 -->
+    <div class="product_card">
+        <div class="sticker sticker_top">Топ продажів</div>
+        <div class="category">
+            <a class="link"
+               href="https://rozetka.com.ua/ua/mobile-phones/c80003/filter/preset=smartfon;price=420-5000/"
+               target="_blank">
+                Бюджетні
+            </a>
+        </div>
+        <div class="image">
+            <a href="https://rozetka.com.ua/ua/mobile-phones/c80003/filter/preset=smartfon;price=420-5000/"
+               target="_blank">
+                <img src="https://content1.rozetka.com.ua/goods/images/big/476481564.jpg"
+                     alt="Бюджетні смартфони">
+            </a>
+        </div>
+        <div class="name_product">
+            <a class="link"
+               href="https://rozetka.com.ua/ua/mobile-phones/c80003/filter/preset=smartfon;price=420-5000/"
+               target="_blank">
+                Бюджетні смартфони
+            </a>
+        </div>
+        <div class="price">до 5000 грн</div>
+        <a href="#" class="btn add-to-cart"
+           data-id="budget"
+           data-name="Бюджетні смартфони"
+           data-price="5000">
+            У кошик
+        </a>
+    </div>
+</div>
+
+<script src="pr6_task1.js" defer></script>
+</body>
+</html>
